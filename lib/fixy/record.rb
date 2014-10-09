@@ -2,7 +2,7 @@ module Fixy
   class Record
     class << self
       def set_record_length(count)
-        self.singleton_class.send :define_method, :record_length { count }
+        self.singleton_class.send :define_method, :record_length, { count }
       end
 
       def field(name, size, range, type)
