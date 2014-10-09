@@ -31,7 +31,7 @@ module Fixy
         end
 
         # We're good to go :)
-        @record_fields[range_from] = { name => name, from => range_from, to => range_to, size => size, type => type}
+        @record_fields[range_from] = { :name => name, :from => range_from, :to => range_to, :size => size, :type => type}
       end
 
       # Convenience method for creating field methods
