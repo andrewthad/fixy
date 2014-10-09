@@ -13,7 +13,7 @@ module Fixy
         raise ArgumentError, "Name '#{name}' is not a symbol"  unless name.is_a? Symbol
         raise ArgumentError, "Size '#{size}' is not a numeric" unless size.is_a?(Numeric) && size > 0
         raise ArgumentError, "Range '#{range}' is invalid"     unless range_matches
-        raise ArgumentError, "Unknown type '#{type}'"          unless (private_instance_methods + instance_methods).include? "format_#{type}".to_sym
+        raise ArgumentError, "Unknown type '#{type}'"          unless (private_instance_methods + instance_methods).include? "format_#{type}"
 
         # Validate the range is consistent with size
         range_from  = Integer(range_matches[1])
